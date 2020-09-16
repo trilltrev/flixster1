@@ -16,14 +16,16 @@ import com.example.flixster.R;
 
 import java.util.List;
 
+import models.Movies;
+
 public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> {
 
     Context context;
-    List<Movie> movies;
+    List<Movies> movie;
 
-    public MovieAdapter(Context context, List<Movie> movies) {
+    public MovieAdapter(Context context, List<Movies> movie) {
         this.context = context;
-        this.movies = movies;
+        this.movie = movie;
     }
 
     //usually involves inflating a layout from XML and returning the holder
@@ -38,7 +40,8 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         // Get the movie at passed position
-        final Movie movie = movies.get(position);
+        final Movies movie = movie.get(position);
+
         // bind the movie data into VH
         holder.bind(movie);
     }
@@ -46,7 +49,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
     // returns total count of item into te list
     @Override
     public int getItemCount() {
-        return movies.size();
+        return movie.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
@@ -63,10 +66,10 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
         }
 
 
-        public void bind(Movie movie) {
-            tvTitle.setText(movie.getTitle());
-            tvOverview.setText(movie.getOverview());
-            Glide.with(context).load(movie.getPosterPath()).into(ivPoster);
+        public void bind(Movies movies) {
+            tvTitle.setText(movies.getTitle());
+            tvOverview.setText(movies.getOverview());
+            Glide.with(context).load(movies.getPosterPath()).into(ivPoster);
         }
     }
 }
