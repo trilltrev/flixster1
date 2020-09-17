@@ -26,7 +26,7 @@ public class Movies {
         }
         return movies;
     }
-
+        //tada
     public String getPosterPath() {
         return String.format("https://image.tmdb.org/t/p/w342/%s", posterPath);
     }
