@@ -65,7 +65,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
             ivPoster = itemView.findViewById(R.id.ivPoster);
         }
 
-
+               //tada
         public void bind(Movies movie) {
             tvTitle.setText(movie.getTitle());
             tvOverview.setText(movie.getOverview());
