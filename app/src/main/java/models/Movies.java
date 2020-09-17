@@ -21,10 +21,10 @@ public class Movies {
 
     public static List<Movies> fromJsonArray(JSONArray moviesJsonArray) throws JSONException {
         List<Movies> movies = new ArrayList<>();
-          for (int i = 0; i < moviesJsonArray.length(); i++) {
-                   movies.add(new Movies(moviesJsonArray.getJSONObject(i)));
-          }
-          return movies;
+        for (int i = 0; i < moviesJsonArray.length(); i++) {
+            movies.add(new Movies(moviesJsonArray.getJSONObject(i)));
+        }
+        return movies;
     }
 
     public String getPosterPath() {
