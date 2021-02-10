@@ -1,4 +1,4 @@
-Flixster1
+Flixster1 part 2
 Flix is an app that allows users to browse movies from the The Movie Database API.
 
 📝 ## Flix Part 2
