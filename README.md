@@ -2,7 +2,7 @@ Flixster1
 Flix is an app that allows users to browse movies from the The Movie Database API.
 
 📝 ## Flix Part 2
-https://ezgif.com/gif-to-mp4/ezgif-3-560ee991e897.gif
+
 
 User Stories
 REQUIRED (10pts)
